@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Starter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body class="bg-gray-900 text-white">
+  <header class="p-4 text-center text-2xl font-bold">Modern Starter</header>
+  <main class="p-4 space-y-8">
+    <section>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide bg-gray-700 p-8 text-center">Slide 1</div>
+          <div class="swiper-slide bg-gray-700 p-8 text-center">Slide 2</div>
+          <div class="swiper-slide bg-gray-700 p-8 text-center">Slide 3</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <section>
+      <a href="https://via.placeholder.com/800x600" class="glightbox" data-gallery="g1">
+        <img src="https://via.placeholder.com/200" alt="sample" class="rounded"/>
+      </a>
+    </section>
+    <section id="templates" data-aos="fade-up">
+      <h2 class="text-xl font-semibold mb-2">Templates & Tools</h2>
+      <div class="space-y-2">
+        <div class="flex items-center gap-2">
+          <input id="tpl1" type="text" value="npm init -y" class="w-full p-2 text-gray-900">
+          <button class="copy-btn bg-blue-600 px-4 py-2 rounded" data-target="tpl1">Copy</button>
+        </div>
+      </div>
+    </section>
+    <section data-aos="fade-up">
+      <h2 class="text-xl font-semibold mb-2">Calculator</h2>
+      <div class="flex flex-col gap-2 w-full max-w-md">
+        <input id="revenue" type="number" placeholder="Revenue" class="p-2 text-gray-900">
+        <input id="expense" type="number" placeholder="Expense" class="p-2 text-gray-900">
+        <div>Profit: <span id="profit">0</span></div>
+        <canvas id="chart" height="100"></canvas>
+      </div>
+    </section>
+    <section data-aos="fade-up">
+      <h2 class="text-xl font-semibold mb-2">Map</h2>
+      <div id="map" class="w-full h-64"></div>
+    </section>
+    <section data-aos="fade-up">
+      <button id="openModal" class="bg-green-600 px-4 py-2 rounded">Open Modal</button>
+    </section>
+  </main>
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden">
+    <div class="bg-gray-800 p-4 rounded">
+      <p class="mb-4">This is a modal</p>
+      <button id="closeModal" class="bg-red-600 px-4 py-2 rounded">Close</button>
+    </div>
+  </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
